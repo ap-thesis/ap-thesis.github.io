@@ -1,0 +1,55 @@
+properties:
+  _n: SafePalS1
+  airgapped: true
+  battery: true
+  btconly: false
+  communicationapi: false
+  dimensions: [86,54,6]
+  display: LCD
+  displaytype: "Color"
+  hasclient: true
+  hwisupport: false
+  independentmode: false
+  madeby: SafePal
+  manual: https://docs.safepal.io/safepal-hardware-wallet/user-manual
+  mcu: SafePal S1
+  mcumanufacturer: AllWinner
+  openclient: false
+  openhardware: false
+  psbt: false
+  segwit: true
+  taproot: false
+  lighting: false
+  bitcoinonlyfirmware: false
+  released: 2019
+  secureelement: Unknown
+  secureelementmanufacturer: null
+  supported: true
+  tethered: "Airgapped"
+  multipleeditions: false
+  ios: true
+  sdcard: false
+  countryoforigin: China
+  macos: false
+  blog: https://blog.safepal.io/
+  hardwarelicensing: "Not open-source"
+  windows: false
+  microusb: true
+  bluetooth: false
+  usbc: false
+  subscription: null
+  disclosureprogram: null
+  nfc: false
+  inputs: "Directional pad with center button"
+  inputmethod: Button
+  packageSecure: "Holographic seal"
+  remotemode: false
+  bomavailable: null
+  linux: false
+  forkedhardware: "None"
+  batterytype: "400mAh"
+  schematicsavailable: null
+  qrcode: true
+  github: https://github.com/safepal/
+  supportlink: https://safepalsupport.zendesk.com/hc/en-us
+  android: true

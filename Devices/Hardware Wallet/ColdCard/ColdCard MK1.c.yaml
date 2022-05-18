@@ -1,0 +1,55 @@
+properties:
+  _n: ColdCardMk1
+  airgapped: false
+  battery: false
+  btconly: true
+  communicationapi: true
+  dimensions: [88, 51, 9]
+  display: OLED BW
+  displaytype: "BW"
+  hasclient: false
+  hwisupport: true
+  independentmode: false
+  madeby: CoinKite
+  manual: https://coldcard.com/docs/
+  mcu: 
+  mcumanufacturer: 
+  openclient: true
+  openhardware: false
+  psbt: true
+  segwit: true
+  taproot: false
+  lighting: false
+  bitcoinonlyfirmware: true
+  released: 2018
+  secureelement: Microchip ATSHA204
+  secureelementmanufacturer: MicroChip
+  supported: false
+  tethered: "Via USB"
+  windows: true
+  linux: true
+  nfc: false
+  hardwarelicensing: "Not open-source"
+  bluetooth: false
+  blog: https://blog.coinkite.com
+  disclosureprogram: null
+  ios: false
+  packageSecure: "Tamper-evident sealbag"
+  bomavailable: 
+  schematicsavailable: 
+  github: https://github.com/coinkite/
+  inputs: "Keypad"
+  inputmethod: Button
+  supportlink: https://coinkite.com/contact
+  microusb: true
+  macos: true
+  remotemode: true
+  batterytype: "None"
+  multipleeditions: false
+  forkedhardware: "Trezor Model One?"
+  countryoforigin: "Canada"
+  qrcode: false
+  subscription: null
+  android: false
+  sdcard: true
+  usbc: false

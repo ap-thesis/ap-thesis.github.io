@@ -1,0 +1,59 @@
+properties:
+  _n: BitBox02
+  airgapped: false
+  battery: false
+  btconly: false
+  communicationapi: true
+  dimensions:
+  - 45
+  - 24
+  - 8
+  display: OLED BW
+  displaytype: "BW"
+  hasclient: true
+  hwisupport: true
+  independentmode: false
+  madeby: ShiftCrypto
+  manual: https://shiftcrypto.support/help/en-us/3-basics
+  mcu: Microchip ATSAMD51J20A-AU
+  mcumanufacturer: MicroChip Technology
+  openclient: true
+  openhardware: true
+  packageSecure: Holographic tape on the box seams
+  psbt: true
+  segwit: true
+  taproot: true
+  lighting: false
+  bitcoinonlyfirmware: true
+  released: 2019
+  secureelement: Microchip ATECC608A
+  secureelementmanufacturer: MicroChip
+  supported: true
+  tethered: "Via USB"
+  nfc: false
+  linux: true
+  supportlink: https://shiftcrypto.support/help/en-us
+  batterytype: "None"
+  packageSecure: "Sealed bag"
+  forkedhardware: "None"
+  schematicsavailable: https://github.com/digitalbitbox/bitbox02-firmware/blob/master/doc/bb02_v2.10_schematics.pdf
+  inputs: "2 Resistive Touch strips"
+  inputmethod: Touch
+  multipleeditions: false
+  ios: false
+  countryoforigin: "Switzerland"
+  android: true
+  subscription: null
+  disclosureprogram: https://shiftcrypto.ch/bug-bounty-program/
+  qrcode: false
+  microusb: false
+  bluetooth: false
+  usbc: true
+  blog: https://shiftcrypto.ch/blog/
+  macos: true
+  bomavailable: https://github.com/digitalbitbox/bitbox02-firmware/blob/master/doc/bb02_bom_v2.10.pdf
+  hardwarelicensing: "Apache 2.0"
+  sdcard: true
+  windows: true
+  remotemode: false
+  github: https://github.com/digitalbitbox/

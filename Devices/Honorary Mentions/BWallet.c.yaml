@@ -1,0 +1,55 @@
+properties:
+  _n: BWallet
+  airgapped: false
+  battery: false
+  btconly: false
+  communicationapi: true
+  dimensions: [60, 60, 6]
+  display: OLED BW
+  displaytype: "BW"
+  hasclient: true
+  hwisupport: false
+  independentmode: false
+  madeby: Bidixing
+  manual: https://readthedocs.org/projects/bwallet-faq/downloads/pdf/latest/
+  mcu: ST STM32F205RE
+  mcumanufacturer: ST MicroElectronics
+  openclient: true
+  openhardware: true
+  psbt: true
+  segwit: false
+  taproot: false
+  lighting: false
+  bitcoinonlyfirmware: false
+  released: 2014
+  secureelement: None
+  secureelementmanufacturer: null
+  supported: false
+  tethered: "Via USB"
+  windows: true
+  linux: true
+  nfc: false
+  hardwarelicensing: "AGPL-3.0"
+  bluetooth: false
+  blog: null
+  disclosureprogram: null
+  ios: false
+  packageSecure: "Unknown"
+  bomavailable: https://github.com/BWallet/bwallet-sch/blob/master/bwallet-sch.pdf
+  schematicsavailable: https://github.com/BWallet/bwallet-sch/blob/master/bwallet-sch.pdf
+  github: https://github.com/bwallet/
+  inputs: "2 buttons"
+  inputmethod: Button
+  supportlink: null
+  microusb: true
+  macos: true
+  remotemode: false
+  batterytype: None
+  multipleeditions: false
+  forkedhardware: None
+  countryoforigin: "China"
+  qrcode: false
+  subscription: null
+  android: true
+  sdcard: false
+  usbc: false

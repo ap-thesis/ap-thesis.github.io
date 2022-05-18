@@ -1,0 +1,55 @@
+properties:
+  _n: FoundationPassport1
+  airgapped: true
+  battery: true
+  btconly: true
+  communicationapi: false
+  dimensions: [102,38,23]
+  display: BW Memory LCD
+  displaytype: "BW"
+  hasclient: true
+  hwisupport: false
+  independentmode: false
+  madeby: Foundation
+  manual: https://docs.foundationdevices.com/
+  mcu: ST STM32H753
+  mcumanufacturer: ST MicroElectronics
+  openclient: true
+  openhardware: true
+  psbt: true
+  segwit: true
+  taproot: false
+  lighting: false
+  bitcoinonlyfirmware: true
+  released: 2021
+  secureelement: Microchip ATECC608A
+  secureelementmanufacturer: MicroChip
+  supported: true
+  tethered: "Airgapped"
+  nfc: false
+  supportlink: https://docs.foundationdevices.com/
+  disclosureprogram: https://foundationdevices.com/security/
+  android: true
+  inputs: "Nokia keypad"
+  inputmethod: Button
+  subscription: null
+  countryoforigin: USA
+  bluetooth: false
+  sdcard: true
+  schematicsavailable: https://github.com/Foundation-Devices/passport-electronics
+  github: https://github.com/Foundation-Devices/
+  microusb: false
+  macos: true
+  windows: true
+  qrcode: true
+  blog: https://blog.foundationdevices.com/
+  hardwarelicensing: CERN-OHL-S v2
+  bomavailable: https://github.com/Foundation-Devices/passport-electronics/blob/master/Main%20Board/Assembly/Bill%20of%20Materials%20-%20CSV/BOM_FD-JL-PCBA-MB_E1.csv
+  linux: true
+  forkedhardware: "ColdCard MK1/MK2"
+  packageSecure: "No"
+  batterytype: "2 AAA batteries"
+  remotemode: false
+  multipleeditions: false
+  ios: true
+  usbc: false

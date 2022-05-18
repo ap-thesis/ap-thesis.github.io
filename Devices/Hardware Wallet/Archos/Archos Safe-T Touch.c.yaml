@@ -1,0 +1,55 @@
+properties:
+  _n: ArchosSafeTTouch
+  airgapped: false
+  battery: true
+  btconly: false
+  communicationapi: false
+  dimensions: [106,64,8]
+  display: LCD touch
+  displaytype: "Color Touch"
+  hasclient: true
+  hwisupport: false
+  independentmode: true
+  madeby: Archos
+  manual: https://usermanual.wiki/Archos/ACSAFETT01
+  mcu: MediaTek MT6739V
+  mcumanufacturer: MediaTek
+  openclient: false
+  openhardware: false
+  psbt: false
+  segwit: true
+  taproot: false
+  lighting: false
+  bitcoinonlyfirmware: false
+  released: 2018
+  secureelement: "ST STSAFE-J102"
+  secureelementmanufacturer: "ST MicroElectronics"
+  supported: false
+  tethered: "Via Bluetooth"
+  nfc: false
+  linux: false
+  supportlink: https://www.archos.com/us/support/index.html
+  batterytype: "Unknown"
+  packageSecure: "Holographic seal"
+  forkedhardware: "None"
+  schematicsavailable: null
+  inputs: "Touch input"
+  inputmethod: Touch
+  multipleeditions: true
+  ios: false
+  countryoforigin: "France"
+  android: true
+  subscription: null
+  disclosureprogram: null
+  qrcode: false
+  microusb: false
+  bluetooth: false
+  usbc: true
+  blog: null
+  macos: false
+  bomavailable: null
+  hardwarelicensing: "Not open-source"
+  sdcard: false
+  windows: false
+  remotemode: false
+  github: null

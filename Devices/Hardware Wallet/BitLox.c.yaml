@@ -1,0 +1,55 @@
+properties:
+  _n: BitLox
+  airgapped: false
+  battery: true
+  btconly: false
+  communicationapi: true
+  dimensions: [85,54,4]
+  display: "E-Ink"
+  displaytype: "BW"
+  hasclient: true
+  hwisupport: false
+  independentmode: false
+  madeby: "BitLox"
+  manual: https://web.archive.org/web/20170222191243/http://bitlox.io/bitlox_hardware_wallet/docs/BitLox_manual_v1.1.pdf
+  mcu: "Atmel SAM3 Platform"
+  mcumanufacturer: "Atmel"
+  openclient: true
+  openhardware: false
+  psbt: false
+  segwit: false
+  taproot: false
+  lighting: false
+  bitcoinonlyfirmware: false
+  released: 2016
+  secureelement: None
+  secureelementmanufacturer: null
+  supported: true
+  tethered: "Via USB, Bluetooth"
+  nfc: false
+  linux: true
+  supportlink: null
+  batterytype: "Unknown"
+  packageSecure: "Unknown"
+  forkedhardware: "None"
+  schematicsavailable: null
+  inputs: "Pinpad"
+  inputmethod: Button
+  multipleeditions: true
+  ios: true
+  countryoforigin: "Hong Kong"
+  android: true
+  subscription: null
+  disclosureprogram: null
+  qrcode: false
+  microusb: false
+  bluetooth: true
+  usbc: true
+  blog: https://www.bitlox.com/blogs/news
+  macos: true
+  bomavailable: null
+  hardwarelicensing: "Not open-source"
+  sdcard: false
+  windows: true
+  remotemode: false
+  github: https://github.com/bitlox

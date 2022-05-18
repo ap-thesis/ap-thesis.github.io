@@ -1,0 +1,364 @@
+# ArchosSafeTMini
+
+## Device ID/name
+Value: ArchosSafeTMini
+
+
+
+## Airgapped device
+Device is able to communicate without 
+
+Value: False
+
+
+
+## Battery
+Device contains a battery
+
+Value: False
+
+
+
+## Bitcoin-only
+Device exclusively supports Bitcoins
+
+Value: False
+
+
+
+## Communication API available
+Device has a communication API available
+
+Value: True
+
+
+
+## Device dimensions
+Device has set dimensions
+
+Value: [58, 58, 8]
+
+
+
+## Display
+Device contains a hardware display for showing transaction data and other information
+
+Value: OLED BW
+
+
+
+## Display type
+Device has a display of specified type
+
+Value: BW
+
+
+
+## Device client
+Device has a made-for-the-device client
+
+Value: True
+
+
+
+## HWI Support
+Device supports Hardware Wallet Interface standard
+
+Value: False
+
+
+
+## Independency
+Device can operate independently from clients (can connect to the mainnet and propagate transactions)
+
+Value: False
+
+
+
+## Made by
+Device is manufactured by
+
+Value: Archos
+
+
+
+## Manual availability
+Device has a manual available
+
+Value: https://www.archos.com/us/products/crypto/faq.html
+
+
+
+## MCU/SOC
+Device uses MCU/SOC specified
+
+Value: None
+
+
+
+## MCU Vendor
+Device MCU is manufactured by
+
+Value: None
+
+
+
+## OSS Client
+Device client is open-source
+
+Value: True
+
+
+
+## PSBT Support
+Device supports Partially Signed Bitcoin Transactions
+
+Value: False
+
+
+
+## SegWit Support
+Device supports SegWit specification
+
+Value: True
+
+
+
+## Taproot Support
+Device supports Taproot specification
+
+Value: False
+
+
+
+## Lighting Network support
+Device supports Lighting network specification
+
+Value: False
+
+
+
+## Bitcoin-only firmware availability
+Device offers Bitcoin-only firmware
+
+Value: False
+
+
+
+## Released in
+Device had been released in year
+
+Value: 2018
+
+
+
+## Secure Element
+Device uses SE specified
+
+Value: Microchip AT88SC0104CA
+
+
+
+## Secure Element Vendor
+Device SE is manufactured by
+
+Value: MicroChip
+
+
+
+## Still supported
+Device is still supported by the vendor
+
+Value: False
+
+
+
+## Tethered device
+Device requires/needs constant connection with another device (computer/phone) to operate.
+
+Value: Via USB
+
+
+
+## NFC
+Device has NFC communication support
+
+Value: False
+
+
+
+## Linux support
+Device has clients that can be ran on Linux
+
+Value: True
+
+
+
+## Support link
+Device vendor has a support available
+
+Value: https://www.archos.com/us/support/index.html
+
+
+
+## Battery type
+Device has a battery type specified
+
+Value: None
+
+
+
+## Packaging protection
+Device packaging has security elements to prevent tampering/supply chain attacks
+
+Value: Holographic seal
+
+
+
+## Hardware forked from
+Device forks hardware specs or schematics from other older device
+
+Value: Trezor Model One
+
+
+
+## Schematics Available
+Device schematics are available under this link
+
+Value: None
+
+
+
+## Input options
+Device contains a selection of inputs for approving transactions, inputting validation data
+
+Value: 2 buttons
+
+
+
+## Multiple editions
+Device contains multiple editions
+
+Value: False
+
+
+
+## iOS support
+Device has clients that can be ran on iOS
+
+Value: False
+
+
+
+## Country of origin
+Device is made by a company based in
+
+Value: France
+
+
+
+## Android support
+Device has clients that can be ran on Android
+
+Value: True
+
+
+
+## Subscription service available
+Device has a premium subscription service available
+
+Value: None
+
+
+
+## Disclosure Program
+Device vendor has a Disclosure program available
+
+Value: None
+
+
+
+## QR Code communication
+Device uses QR codes for communication
+
+Value: False
+
+
+
+## MicroUSB
+Device offers MicroUSB connectivity
+
+Value: True
+
+
+
+## Bluetooth
+Device has Bluetooth
+
+Value: False
+
+
+
+## USB-C
+Device offers USB-C connectivity
+
+Value: False
+
+
+
+## Developer Blog
+Device vendor has a Blog available
+
+Value: None
+
+
+
+## macOS support
+Device has clients that can be ran on macOS
+
+Value: True
+
+
+
+## BOM Available
+Device's Bill of Materials is available under this link
+
+Value: None
+
+
+
+## Hardware licensing
+Device hardware is licensed under
+
+Value: Not open-source
+
+
+
+## SD Card slot
+Device has an SD Card slot available
+
+Value: False
+
+
+
+## Windows support
+Device has clients that can be ran on Windows
+
+Value: True
+
+
+
+## Remote mode
+Device has means of being remotely accessed without physically interacting with the device
+
+Value: False
+
+
+
+## Developer GitHub
+Device vendor has a GitHub available
+
+Value: https://github.com/archos-safe-t
+
+
+

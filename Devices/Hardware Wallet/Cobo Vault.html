@@ -1,0 +1,1448 @@
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <title>
+    Cobo Vault (now Keystone Pro) – BCAP - Hardware Wallets Wiki
+  </title>
+  
+    
+      <meta property='og:description' content />
+      <meta property='og:site_name' content='BCAP - Hardware Wallets Wiki' />
+      <meta property='og:type' content='website' />
+      <meta property='og:title' content='Cobo Vault (now Keystone Pro)' />
+    
+    
+      <base href='https://ap-thesis.github.io/' />
+      <link href='favicon.svg' rel='icon' />
+    
+    <meta name='generator' content='Emanote' />
+
+  
+  <link href='tailwind.css?instanceId=a84f766e-b750-42e0-911e-70967e8c25b2' rel='stylesheet' type='text/css' />
+
+  <!-- Heist error element -->
+  <style type='text/css'>
+    strong.error {
+      color: lightcoral;
+      font-size: 90%;
+      font-family: monospace;
+    }
+  </style>
+  <!-- What goes in this file will appear on near the end of <head>--><link rel='preload' href='_emanote-static/fonts/Maven_Pro/MavenPro-VariableFont_wght.ttf' as='font' type='font/ttf' crossorigin />
+
+<style>
+  @font-face {
+    font-family: 'MavenPro';
+    /* FIXME: This ought to be: ${ema:emanoteStaticLayerUrl}/fonts/Maven_Pro/MavenPro-VariableFont_wght.ttf */
+    src: url(_emanote-static/fonts/Maven_Pro/MavenPro-VariableFont_wght.ttf) format("truetype");
+    font-display: swap;
+  }
+
+  body {
+    font-family: 'MavenPro', sans-serif;
+    /* font-variation-settings: 'wght'300; */
+  }
+
+  a.mavenLinkBold {
+    font-variation-settings: 'wght'500;
+  }
+
+  strong {
+    font-variation-settings: 'wght'500;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  header,
+  .header-font {
+    font-family: 'MavenPro', sans-serif;
+  }
+</style>
+
+  <head-main></head-main>
+</head>
+
+<!-- DoNotFormat -->
+
+
+
+<!-- DoNotFormat -->
+
+<body class='bg-gray-400 overflow-y-scroll'>
+  
+    <div class='container mx-auto'>
+
+      <nav id='breadcrumbs' class='w-full text-gray-700 md:hidden'>
+  <div class='flex justify-left'>
+    <div class='w-full px-2 py-2 bg-gray-50'>
+      <ul class='flex flex-wrap text-lg'>
+        <li class='inline-flex items-center'>
+          
+            
+              <img style='width: 1rem;' src='favicon.svg' />
+            
+          
+        </li>
+        
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href=''>
+                Main page
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='Devices.html'>
+                Devices
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='Devices/Hardware%20Wallet.html'>
+                Hardware Wallet
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+        
+      </ul>
+    </div>
+    <button class='inline px-2 py-1 text-white bg-red-600 outline-none cursor-pointer focus:outline-none' title='Toggle sidebar' type='button' onclick="toggleHidden('sidebar')">
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16'></path>
+      </svg>
+    </button>
+    <script>
+      function toggleHidden(elemId) {
+        document.getElementById(elemId).classList.toggle("hidden");
+      }
+    </script>
+  </div>
+</nav>
+
+      <div id='container' class='flex flex-nowrap flex-col md:flex-row bg-gray-50 md:mt-8 md:shadow-2xl md:mb-8'>
+        <!-- Sidebar column -->
+        <nav id='sidebar' class='flex-shrink hidden leading-relaxed md:block md:sticky md:top-0 md:h-full md:w-48 xl:w-64'>
+          <div class='px-2 py-2 text-gray-800'>
+
+            <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
+              <a href='-/tags.html' title='View tags'>
+                <svg style='width: 1rem;' class='hover:text-red-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                  <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
+                  </path>
+                </svg>
+              </a>
+              <a href='-/all.html' title='Expand full tree'>
+                <svg style='width: 1rem;' class='hover:text-red-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                  <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
+                  </path>
+                </svg>
+              </a>
+            </div>
+
+            <div id='site-logo' class='pl-2'>
+              <div class='flex items-center my-2 space-x-2 justify-left'>
+                <a href='' title='Go to Home'>
+                  
+                    
+                      <!-- The style width attribute here is to prevent huge
+                      icon from displaying at those rare occasions when Tailwind
+                      hasn't kicked in immediately on page load 
+                      -->
+                      <img style='width: 1rem;' class='transition transform hover:scale-110 hover:opacity-80' src='favicon.svg' />
+                    
+                  
+                </a>
+                <a class='font-bold truncate' title='Go to Home' href=''>
+                  Home
+                </a>
+              </div>
+            </div>
+
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Autotable' href='autotable.html'>
+      Autotable
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Breakdowns' href='Breakdowns.html'>
+      Breakdowns
+    </a>
+    
+      
+        <span class='text-gray-300' title='3 children inside'>
+          3
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Devices' href='Devices.html'>
+      Devices
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Cryptocard' href='Devices/Cryptocard.html'>
+      Cryptocard
+    </a>
+    
+      
+        <span class='text-gray-300' title='2 children inside'>
+          2
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Hardware Wallet' href='Devices/Hardware%20Wallet.html'>
+      Hardware Wallet
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Archos' href='Devices/Hardware%20Wallet/Archos.html'>
+      Archos
+    </a>
+    
+      
+        <span class='text-gray-300' title='2 children inside'>
+          2
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='BC Vault' href='Devices/Hardware%20Wallet/BC%20Vault.html'>
+      BC Vault
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='BitBox02' href='Devices/Hardware%20Wallet/BitBox02.html'>
+      BitBox02
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='BitLox' href='Devices/Hardware%20Wallet/BitLox.html'>
+      BitLox
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Blockstream Jade' href='Devices/Hardware%20Wallet/Blockstream%20Jade.html'>
+      Blockstream Jade
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+  
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
+        </path>
+      </svg>
+      
+  
+    <a class='font-bold text-red-600 hover:underline truncate' title='Cobo Vault (now Keystone Pro)' href='Devices/Hardware%20Wallet/Cobo%20Vault.html'>
+      Cobo Vault (now Keystone Pro)
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='ColdCard' href='Devices/Hardware%20Wallet/ColdCard.html'>
+      ColdCard
+    </a>
+    
+      
+        <span class='text-gray-300' title='2 children inside'>
+          2
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='D’Cent Biometric Wallet' href='Devices/Hardware%20Wallet/DCent%20Biometric%20Wallet.html'>
+      D’Cent Biometric Wallet
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Foundation Passport' href='Devices/Hardware%20Wallet/Foundation%20Passport.html'>
+      Foundation Passport
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Ledger' href='Devices/Hardware%20Wallet/Ledger.html'>
+      Ledger
+    </a>
+    
+      
+        <span class='text-gray-300' title='3 children inside'>
+          3
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='SafePal S1' href='Devices/Hardware%20Wallet/SafePal%20S1.html'>
+      SafePal S1
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='SecuX' href='Devices/Hardware%20Wallet/SecuX.html'>
+      SecuX
+    </a>
+    
+      
+        <span class='text-gray-300' title='2 children inside'>
+          2
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Trezor' href='Devices/Hardware%20Wallet/Trezor.html'>
+      Trezor
+    </a>
+    
+      
+        <span class='text-gray-300' title='3 children inside'>
+          3
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Honorary Mentions' href='Devices/Honorary%20Mentions.html'>
+      Honorary Mentions
+    </a>
+    
+      
+        <span class='text-gray-300' title='4 children inside'>
+          4
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Documents' href='Documents.html'>
+      Documents
+    </a>
+    
+      
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Hardware Chips' href='Hardware%20Chips.html'>
+      Hardware Chips
+    </a>
+    
+      
+        <span class='text-gray-300' title='3 children inside'>
+          3
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Libraries' href='Libraries.html'>
+      Libraries
+    </a>
+    
+      
+        <span class='text-gray-300' title='2 children inside'>
+          2
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Miscelaneous' href='Miscelaneous.html'>
+      Miscelaneous
+    </a>
+    
+      
+        <span class='text-gray-300' title='5 children inside'>
+          5
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Software Wallets' href='Software%20Wallets.html'>
+      Software Wallets
+    </a>
+    
+      
+        <span class='text-gray-300' title='4 children inside'>
+          4
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='autogen' href='autogen.html'>
+      autogen
+    </a>
+    
+      
+        <span class='text-gray-300' title='28 children inside'>
+          28
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='graphs' href='graphs.html'>
+      graphs
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+
+          </div>
+        </nav>
+
+        <!-- Main body column -->
+        <div class='flex-1 w-full overflow-x-auto bg-white'>
+          <main class='px-4 py-4'>
+            <h1 class='flex items-end justify-center mb-4 p-3 bg-red-100 text-5xl font-extrabold text-black rounded'>
+  <a class='z-40 tracking-tighter '>
+    Cobo Vault (now Keystone Pro)
+  </a>
+</h1>
+            <article class='overflow-auto'>
+  <!-- What goes in this file will appear on top of note body-->
+  
+    <p class='mb-3'>
+      Is an airgapped hardware cryptowallet powered by custom fork of Android OS and custom hardware. The device prides upon it’s airgapped nature up to you a point of not being able to directly charge the device while it’s powered on and no communication modules.
+    </p>
+  <h2 id='at-a-glance' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>At a glance</h2><h3 id='transparency' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Transparency</h3>
+    <p class='mb-3'>
+      Most of the OS and hardware, and SE firmware are fully open-source and available on their <a href='https://github.com/KeystoneHQ' class='text-red-600 hover:underline' target='_blank' rel='noopener'>github</a> and <a href='https://github.com/KeystoneHQ/Keystone-developer-documents/tree/main/hardware' class='text-red-600 hover:underline' target='_blank' rel='noopener'>github repo</a>. The device also has a publicly released third-party code audit at <a href='https://github.com/KeystoneHQ/Keystone-developer-documents/tree/main/audit-report' class='text-red-600 hover:underline' target='_blank' rel='noopener'>https://github.com/KeystoneHQ/Keystone-developer-documents/tree/main/audit-report</a>.
+    </p>
+  
+    <p class='mb-3'>
+      The <s>SE schematics, spec sheet are proprietary and can be accessed under an NDA</s>, the only thing under NDA is the self-destruct mechanism, which is stated here: <code class='py-0.5 px-0.5 bg-gray-100'>The self-destruct mechanism has been removed from the schematic as we chose not to disclose all of its functionality. In order to minimize the attack surface, we do not share detailed information on the Secure Element. For researchers who are interested in our Secure Element design, you can request we share the development board, datasheet, and other materials under NDA (required by our Secure Element vendor). Contact us at [eng@keyst.one](mailto:eng@keyst.one)</code>
+    </p>
+  
+    <p class='mb-3'>
+      MCU (SOC) is internally coded as Cobo CBYXM001 in BOM. The device thus far seems to hint, that they use fully custom SOCs, which may make creation of fakes much harder. The MCU is ARMv7 based.
+    </p>
+  
+    <p class='mb-3'>
+      The Secure Element is custom-made as well, and the specsheet can be found here - <a href='https://github.com/KeystoneHQ/Keystone-developer-hub/blob/main/se/Keystone_Secure_Element_Datasheet.md' class='text-red-600 hover:underline' target='_blank' rel='noopener'><a href='https://github.com/KeystoneHQ/Keystone-developer-hub/blob/main/se/Keystone_Secure_Element_Datasheet.md' class='text-red-600 hover:underline' target='_blank' rel='noopener'>https://github.com/KeystoneHQ/Keystone-developer-hub/blob/main/se/Keystone_Secure_Element_Datasheet.md</a></a>.
+    </p>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='language-none'>Keystone's Secure Element is a 32-bit security microcontroller, which is specifically targeted at low-cost and low-power fields. The Secure Element is an ARM Cortex M0 microcontroller integrated with a variety of secure cryptographic modules, including the SM1, SM2, SM3, SM4 algorithm, as well as RSA/ECC, DES/3DES, AES128, AES192/256, SHA1/256, SHA384/512 and other internationally recognized security algorithms. It supports true random number generation (TNRG). The Secure Element provides a variety of peripheral interfaces: USB2.0 full speed, SPI, UART, ISO7816, I2C, etc. built-in ROSC, and also supports crystal-free applications.
+
+Keystone's Secure Element has a 256K byte on-chip eFlash, 16K bytes of ROM, 16K bytes of on-chip SRAM, and 4K bytes of dedicated SRAM algorithm, of which on-chip ROM provides various algorithm interface programs for developers. It improves the development efficiency and optimizes system performance.</code></pre></div>
+    <p class='mb-3'>
+      This document had been released after rebranding and partially redisigning their device from Cobo Vault to KeyStone Pro. The rebrand was followed by spinning off from the parent Cobo company onto a separate business entity for management reasons, since Cobo had started focusing on their software segment and was uninterested in maintaining their hardware division. Cobo is maintaining the former device with maintenance patches.
+    </p>
+  
+    <p class='mb-3'>
+      An article by Nick Johnson had been released, that prior publication of this specsheet had tried to disassemble the device and assess what hardware is being used - <a href='https://medium.com/swlh/defeating-the-cobo-vault-pros-self-destruct-mechanism-abf321e2f5b5' class='text-red-600 hover:underline' target='_blank' rel='noopener'># Defeating the Cobo Vault Pro’s Self-Destruct Mechanism</a>. Also it has x-ray scans of the hardware and the still redacted anti-tamper mechanism.
+    </p>
+  
+    <p class='mb-3'>
+      The communication between SOC and SE is done via serial port, according to the <a href='https://github.com/CoboVault/cobo-vault-cold' class='text-red-600 hover:underline' target='_blank' rel='noopener'><a href='https://github.com/CoboVault/cobo-vault-cold' class='text-red-600 hover:underline' target='_blank' rel='noopener'>https://github.com/CoboVault/cobo-vault-cold</a></a>, quoting:
+    </p>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='language-none'>Interaction with the Secure Element (SE) via serial port, open source SE firmware can be found at [cobo-vault-se-firmware](https://github.com/CoboVault/cobo-vault-se-firmware). Transaction data is signed by the Secure Element and the generated signature is sent back to the application. This signature and other necessary messages are displayed as a QR code. You can check the animation on our webpage to see the whole process. Users use their mobile or desktop application to acquire signed transaction data and broadcast it.</code></pre></div>
+    <p class='mb-3'>
+      Some parts of the OS are removed due to vendor requirements and require an NDA.
+    </p>
+  
+    <p class='mb-3'>
+      In addition, the circuitry related to the anti-tampering mechanism are hidden in publicly available schematics and require an NDA as well. What’s known is, that it uses an internal battery to power the circuitry, with the battery lasting according to manufacturer around 2 years. If the battery dies, so does the anti-tampering safeguard (TODO, find out more). Personally, I perceive this kind of security measure as an act of planned obsolescence than as a security feature. Especially with such a short timeframe. A better improvement would’ve been making the battery user removable.
+    </p>
+  
+    <p class='mb-3'>
+      <s>For the reasons above, the BOM and schematics don’t describe the full device but only a part of it, requiring some amount of work to get complete picture of the device.</s>
+    </p>
+  
+    <p class='mb-3'>
+      Cobo also has a GitHub guide for implementing the communication API to facilitate communication with other clients. It uses Bitcoin Uniform Resources which is also used on <a href='Devices/Hardware%20Wallet/Foundation%20Passport.html' class='text-red-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkNormal'>Foundation Passport</a>.
+    </p>
+  <h3 id='software-client' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Software client</h3>
+    <p class='mb-3'>
+      Cobo used to support the device with their own app called Cobo Vault. Due to the discontinuation of the device by the original team and change of focus by Cobo, the app is now deprecated for usage.
+    </p>
+  
+    <p class='mb-3'>
+      Sparrow Wallet supports linking with Cobo and Keystone.
+    </p>
+  <h3 id='optional-features' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Optional features</h3>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Pro edition contains physical anti-tampering safeguard, on attempted opening of the device it will wipe the contents of the NAND flash (<a href='https://blog.keyst.one/self-destruct-mechanisms-unique-defense-against-side-channel-attacks-4cfea3d4eff1' class='text-red-600 hover:underline' target='_blank' rel='noopener'>https://blog.keyst.one/self-destruct-mechanisms-unique-defense-against-side-channel-attacks-4cfea3d4eff1</a>)
+        </li>
+      
+        <li>
+          Upgrade to bitcoin-only firmware, this is one-way only
+        </li>
+      
+        <li>
+          Higher-tier Pro edition contains a fingerprint reader
+        </li>
+      
+        <li>
+          <a href='Miscelaneous/Shamir%20backup.html' class='text-red-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkNormal'>Shamir backup</a>
+        </li>
+      
+        <li>
+          PRNG Entropy modification via physical dicerolls
+        </li>
+      
+        <li>
+          Pattern lock for easier access to device (not to sign transactions though)
+        </li>
+      
+    </ul>
+  <h3 id='security' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Security</h3>
+    <p class='mb-3'>
+      The device’s SE hides a special keypair assigned at manufacturing, which atestates genuity of the SE and the device itself. This challenge is done by reading special QR codes which validate if the messages are signed properly, if not, the device is not genuine.
+    </p>
+  
+    <p class='mb-3'>
+      <a href='https://blog.keyst.one/web-authentication-a-counter-to-supply-chain-attacks-62d0272f656b' class='text-red-600 hover:underline' target='_blank' rel='noopener'>https://blog.keyst.one/web-authentication-a-counter-to-supply-chain-attacks-62d0272f656b</a>
+    </p>
+  
+    <p class='mb-3'>
+      The pro edition contains a fingerprint reader for validating transactions and fast unlocking of the device. The device uses a master password for encrypting data and unlocking the device.
+    </p>
+  
+    <p class='mb-3'>
+      <a href='https://blog.keyst.one/keystone-product-design-principles-cd833bc11125' class='text-red-600 hover:underline' target='_blank' rel='noopener'>https://blog.keyst.one/keystone-product-design-principles-cd833bc11125</a>
+    </p>
+  <hr class='mb-3' />
+    <p class='mb-3'>
+      Cobo Vault and Keystone Pro are virtually the same device, with minor hardware differences, which makes both devices different. Both devices are designed by the same development team formerly part of Cobo company and spun off into a separate company.
+    </p>
+  
+    <p class='mb-3'>
+      Maintenance on Cobo Vault’s firmware is already limited by the fact, that the device had been discontinued from manufacturing and is maintained by Cobo, supposedly applying only minimal maintenance to it’s product.
+    </p>
+  
+    <p class='mb-3'>
+      Source: <a href='https://blog.keyst.one/leaving-cobo-to-continue-the-cobo-vault-legacy-29bb2f8f026e' class='text-red-600 hover:underline' target='_blank' rel='noopener'>Leaving Cobo to continue the Cobo Vault legacy | by Lixin Liu | Keystone</a>
+    </p>
+  
+    <p class='mb-3'>
+      The difference on Keystone and Cobo stems on more technical side of things, such as placement of SD card slot, and support for greater capacity SD cards. Aside from that, the software foundation is the same on both the SOC (frontend and parser), and SE (backend).
+    </p>
+  
+    <p class='mb-3'>
+      The SE according to the available documentation allows efficient usage of known cryptographic algorithms. On the github repository, the firmware hosts .lib files for ecdsa and rsa, which either hint for software-based implementation of the cryptographic algorithms. (<a href='https://github.com/CoboVault/cobo-vault-se-firmware/tree/29321e8c0efb41069c62860d9e670201e3aab749/source/driver' class='text-red-600 hover:underline' target='_blank' rel='noopener'>cobo-vault-se-firmware/source/driver at 29321e8c0efb41069c62860d9e670201e3aab749 · CoboVault/cobo-vault-se-firmware · GitHub</a>)
+    </p>
+  
+    <p class='mb-3'>
+      Another thing to note, that the firmware seems to utilise an anti-tamper mechanism, which checks for illicit inputs to GPIO pins of the SE (<a href='https://github.com/CoboVault/cobo-vault-se-firmware/blob/29321e8c0efb41069c62860d9e670201e3aab749/source/main.c#L104' class='text-red-600 hover:underline' target='_blank' rel='noopener'>https://github.com/CoboVault/cobo-vault-se-firmware/blob/29321e8c0efb41069c62860d9e670201e3aab749/source/main.c#L104</a>).
+    </p>
+  
+    <p class='mb-3'>
+      The logic is located here (<a href='https://github.com/CoboVault/cobo-vault-se-firmware/blob/29321e8c0efb41069c62860d9e670201e3aab749/source/main.c#L225' class='text-red-600 hover:underline' target='_blank' rel='noopener'>https://github.com/CoboVault/cobo-vault-se-firmware/blob/29321e8c0efb41069c62860d9e670201e3aab749/source/main.c#L225</a>), if at any point during the idle mode of the SE a trip flag called <code class='py-0.5 px-0.5 bg-gray-100'>defense_trig_flag</code> gets set to true (this happens if illicit inputs are inputted into SE’s GPIO pins), the device irrevocably wipes the SE of it’s settings, wallets and webauth keys and fallbacks into a <code class='py-0.5 px-0.5 bg-gray-100'>HDW_STATUS_ATTACK</code> mode.
+    </p>
+  
+    <p class='mb-3'>
+      This defense measurement seems to prevent possible attack via voltage glitching or feeding invalid inputs into device’s GPIO pins. One important thing to note, that device’s tamper check is disabled if <code class='py-0.5 px-0.5 bg-gray-100'>emHDWstatus</code> of the device is set to <code class='py-0.5 px-0.5 bg-gray-100'>E_HDWS_CHIP</code> or <code class='py-0.5 px-0.5 bg-gray-100'>E_HDWS_FACTORY</code>.
+    </p>
+  <hr class='mb-3' /><h3 id='physical-security' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Physical security</h3>
+    <p class='mb-3'>
+      The packaging is protected by holographic anti-tampering tapes.
+    </p>
+  
+    <p class='mb-3'>
+      The security of the device is very strict. The device is truly airgapped, even charging the device requires to shut down the device and physically remove the battery.
+    </p>
+  
+    <p class='mb-3'>
+      The Pro edition of the hardware contains a physical anti-tamper mechanism which wipes the device if any attempts are made to access the device via it’s display panel. If the anti-tamper mechanism is tripped, the device immediately wipes the NAND, thus bricking the device.
+    </p>
+  
+    <p class='mb-3'>
+      <a href='https://blog.keyst.one/self-destruct-mechanisms-unique-defense-against-side-channel-attacks-4cfea3d4eff1' class='text-red-600 hover:underline' target='_blank' rel='noopener'>https://blog.keyst.one/self-destruct-mechanisms-unique-defense-against-side-channel-attacks-4cfea3d4eff1</a>
+    </p>
+  <h3 id='privacy' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Privacy</h3>
+    <p class='mb-3'>
+      The device relies on a software wallet to do it’s work, reducing confidentiality of the funds on the device.
+    </p>
+  <h2 id='non-hardware-related' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Non-hardware related</h2><h3 id='manual' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Manual</h3>
+    <p class='mb-3'>
+      Manual is located <a href='https://support.keyst.one/' class='text-red-600 hover:underline' target='_blank' rel='noopener'>https://support.keyst.one/</a>. It’s
+    </p>
+  <h3 id='support' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Support</h3>
+    <p class='mb-3'>
+      They have a web support located here <a href='https://keystonewallet.atlassian.net/servicedesk/customer/portal/1' class='text-red-600 hover:underline' target='_blank' rel='noopener'>https://keystonewallet.atlassian.net/servicedesk/customer/portal/1</a>
+    </p>
+  <h2 id='upgradability' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Upgradability</h2>
+    <p class='mb-3'>
+      The firmware is regularly updated, and the update is loaded into an external SD card. The hardware seems to be beefy enough to support even the most demanding cryptocurrencies and 4 GB NAND (according to the BOM) and SD card slot gives a big space for expandability in the future.
+    </p>
+  
+  <!-- What goes in this file will appear below the note body-->
+</article>
+            <div class='flex flex-col lg:flex-row lg:space-x-2'>
+              
+              
+  <div class='flex-1 p-4 mt-8 bg-gray-100 rounded'>
+    <header class='mb-2 text-xl font-semibold text-gray-500'>Links to this page</header>
+    <ul class='space-y-1'>
+      
+        <li>
+          <a class='text-red-600 mavenLinkBold hover:bg-red-50' href='Devices/Hardware%20Wallet/Foundation%20Passport.html'>
+            Foundation Passport
+          </a>
+          
+            <div class='mb-4 overflow-auto text-sm text-gray-500'>
+  
+    <div class='pl-2 mt-2 border-l-2 border-red-200 hover:border-red-500'>
+      <div><p>Personally, I perceive this as a very nice addition to the premium cryptowallet space, due to other similarly priced devices being mostly proprietary like <a href='Devices/Hardware%20Wallet/BC%20Vault.html' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>BC Vault</a> or partially open-source like <a href='Devices/Hardware%20Wallet/Cobo%20Vault.html' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Cobo Vault/Keystone</a>.</p></div>
+    </div>
+  
+    <div class='pl-2 mt-2 border-l-2 border-red-200 hover:border-red-500'>
+      <div><p>The device has an outstandingly beefy SOC which allows it to do much more compared to other SOCs. Performance-wise, it’s only weaker to <a href='Devices/Hardware%20Wallet/Cobo%20Vault.html' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Cobo Vault (now Keystone Pro)</a>. The upgradability issues could stem from lack of any wireless communication hardware, which may make</p></div>
+    </div>
+  
+</div>
+          
+        </li>
+      
+        <li>
+          <a class='text-red-600 mavenLinkBold hover:bg-red-50' href='Devices/Hardware%20Wallet/BitBox02.html'>
+            BitBox02
+          </a>
+          
+            <div class='mb-4 overflow-auto text-sm text-gray-500'>
+  
+    <div class='pl-2 mt-2 border-l-2 border-red-200 hover:border-red-500'>
+      <div><p>Compared to other Secure Elements used say in Ledger or <a href='Devices/Hardware%20Wallet/Cobo%20Vault.html' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Cobo Vault (now Keystone Pro)</a>, the SE is not a fully-fledged MCU, but instead only offers a minimal feature set related to cryptography, keystore and communication between the SE itself and an MCU. Cryptography-wise, the SE fully implements and also hardware-accelerates algorithms like AES128, ECDSA, SHA256. Hardware acceleration according to the manufacturer prevents “usual high risk of key exposure that is endemic to standard microprocessors.” (further prove?).</p></div>
+    </div>
+  
+</div>
+          
+        </li>
+      
+    </ul>
+  </div>
+
+            </div>
+            
+  <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
+    
+  </section>
+
+            <!-- What goes in this file will at the very end of the main div -->
+          </main>
+        </div>
+      </div>
+      <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-gray-800'>
+  
+  <div>
+    <a href='' title='Go to Home page'>
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-6 h-6 hover:text-red-700' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'></path>
+      </svg>
+    </a>
+  </div>
+  <div>
+    <a href='-/all.html' title='View Index'>
+      <svg class='w-6 h-6 hover:text-red-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
+        </path>
+      </svg>
+    </a>
+  </div>
+  <div>
+    <a href='https://emanote.srid.ca' target='_blank' title='Generated by Emanote 0.6.5.6'>
+      <img class='w-6 h-6 hover:text-red-700' src='_emanote-static/emanote-logo.svg' />
+    </a>
+  </div>
+  <div>
+    <a href='-/tags.html' title='View tags'>
+      <svg class='w-6 h-6 hover:text-red-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
+        </path>
+      </svg>
+    </a>
+  </div>
+  <div>
+    <a href='-/tasks.html' title='View tasks'>
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-6 h-6 hover:text-red-700' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'></path>
+      </svg>
+    </a>
+  </div>
+</footer>
+    </div>
+  
+</body>
+
+</html>

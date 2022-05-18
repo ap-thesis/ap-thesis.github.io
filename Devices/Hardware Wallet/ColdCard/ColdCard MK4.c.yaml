@@ -1,0 +1,55 @@
+properties:
+  _n: ColdCardMk4
+  airgapped: false
+  battery: false
+  btconly: true
+  communicationapi: true
+  dimensions: [88, 52, 9]
+  display: OLED BW
+  displaytype: "BW"
+  hasclient: false
+  hwisupport: true
+  independentmode: false
+  madeby: CoinKite
+  manual: https://coldcard.com/docs/
+  mcu: STM32L4S5VIT6
+  mcumanufacturer: ST MicroElectronics
+  openclient: true
+  openhardware: true
+  psbt: true
+  segwit: true
+  taproot: true
+  lighting: false
+  bitcoinonlyfirmware: true
+  released: 2022
+  secureelement: Microchip ATECC608A/B and Maxim DS28C36BQ+T
+  secureelementmanufacturer: MicroChip and Maxim
+  supported: true
+  tethered: "Via USB, NFC"
+  windows: true
+  linux: true
+  nfc: true
+  hardwarelicensing: "All rights reserved"
+  bluetooth: false
+  blog: https://blog.coinkite.com
+  disclosureprogram: null
+  ios: true
+  packageSecure: "Tamper-evident sealbag"
+  bomavailable: https://github.com/Coldcard/firmware/blob/master/hardware/bom-mark4b.xlsx
+  schematicsavailable: https://github.com/Coldcard/firmware/blob/master/hardware/schematic-mark4d.png
+  github: https://github.com/coinkite/
+  inputs: "Keypad"
+  inputmethod: Button
+  supportlink: https://coinkite.com/contact
+  microusb: false
+  macos: true
+  remotemode: true
+  batterytype: "None"
+  multipleeditions: false
+  forkedhardware: "ColdCard Mk3"
+  countryoforigin: "Canada"
+  qrcode: false
+  subscription: null
+  android: true
+  sdcard: true
+  usbc: true

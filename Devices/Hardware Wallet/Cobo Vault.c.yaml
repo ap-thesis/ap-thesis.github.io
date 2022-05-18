@@ -1,0 +1,55 @@
+properties:
+  _n: CoboVault
+  airgapped: true
+  battery: true
+  btconly: false
+  communicationapi: true
+  dimensions: [112, 64, 15]
+  display: LCD Touch
+  displaytype: "Color Touch"
+  hasclient: true
+  hwisupport: false
+  independentmode: false
+  madeby: Cobo
+  manual: https://myhardwarewallet.co.uk/wp-content/uploads/2019/08/Quick-Guide-EN.pdf
+  mcu: Cobo CBYXM001
+  mcumanufacturer: Cobo
+  openclient: false
+  openhardware: true
+  psbt: true
+  segwit: true
+  taproot: false
+  lighting: false
+  bitcoinonlyfirmware: true
+  released: 2020
+  secureelement: Cobo SE
+  secureelementmanufacturer: Cobo
+  supported: false
+  tethered: "Airgapped"
+  nfc: false
+  linux: true
+  supportlink: null
+  batterytype: "2xAA battery"
+  packageSecure: "Holographic seal"
+  forkedhardware: "None"
+  schematicsavailable: https://github.com/CoboVault/cobo-vault-docs/blob/master/hardware/Cobo_Vault_V1.02_schematic.pdf
+  inputs: "Touch input"
+  inputmethod: Touch
+  multipleeditions: true
+  ios: true
+  countryoforigin: "China"
+  android: true
+  subscription: null
+  disclosureprogram: null
+  qrcode: true
+  microusb: false
+  bluetooth: false
+  usbc: false
+  blog: null
+  macos: true
+  bomavailable: https://github.com/CoboVault/cobo-vault-docs/blob/master/hardware/Cobo_Vault_V1.02_BOM.xls
+  hardwarelicensing: "All Rights Reserved"
+  sdcard: true
+  windows: true
+  remotemode: false
+  github: https://github.com/CoboVault/

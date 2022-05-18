@@ -1,0 +1,55 @@
+properties:
+  _n: DCentWallet
+  airgapped: false
+  battery: true
+  btconly: false
+  communicationapi: false
+  dimensions: [77, 43, 11]
+  display: OLED BW
+  displaytype: "BW"
+  hasclient: true
+  hwisupport: false
+  independentmode: false
+  madeby: D'Cent
+  manual: https://userguide.dcentwallet.com/
+  mcu: Unknown
+  mcumanufacturer: ST MicroElectronics
+  openclient: false
+  openhardware: false
+  psbt: false
+  segwit: true
+  taproot: false
+  lighting: false
+  bitcoinonlyfirmware: false
+  released: 2020
+  secureelement: Unknown
+  secureelementmanufacturer: NXP Microconductors
+  supported: true
+  tethered: "Via Bluetooth"
+  usbc: false
+  microusb: true
+  countryoforigin: South Korea
+  multipleeditions: false
+  blog: null
+  bluetooth: true
+  github: https://github.com/DcentWallet
+  remotemode: false
+  supportlink: https://dcentwallet.com/support/Questions
+  ios: true
+  disclosureprogram: null
+  bomavailable: null
+  batterytype: "Li-Ion 585mAh"
+  sdcard: false
+  subscription: null
+  packageSecure: Holographic seal
+  nfc: false
+  hardwarelicensing: "Not open-source"
+  qrcode: false
+  forkedhardware: "None"
+  macos: false
+  android: true
+  linux: false
+  windows: false
+  inputs: "Directional pad with center button"
+  inputmethod: Button
+  schematicsavailable: null
